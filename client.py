@@ -16,7 +16,7 @@ sock.send(bytes(json.dumps(sent_content), encoding='UTF-8'))
 
 def listen_server():
     """ Слушаем сервер """
-    print(json.loads(sock.recv(2048)))
+    print(json.loads(sock.recv(1024)))
     return listen_server()
 
 
