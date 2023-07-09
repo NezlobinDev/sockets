@@ -8,7 +8,7 @@ from methods import user_connection, user_disconnection, user_send_message
 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1) # That doesn't seems to work...
+sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
 sock.bind(('', 7777))
 sock.listen(1000)
 
