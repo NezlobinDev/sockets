@@ -37,7 +37,7 @@ def listen_for_client(user: User):
     client = user.conn
     while True:
         try:
-            data = json.loads(client.recv(2048)) # wqeqw
+            data = json.loads(client.recv(1024)) # wqeqw
             if not data:
                 continue
             print(data)
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     while True:
         client_socket, client_data = sock.accept()
         print(client_data)
-        data = json.loads(client_socket.recv(2048))
+        data = json.loads(client_socket.recv(1024))
         print(data)
         client_name = data['params']['name']
         client_data = (*client_data, client_name)
